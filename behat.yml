@@ -1,0 +1,21 @@
+default:
+  suites:
+    default:
+      paths:
+        features: '/Applications/MAMP/htdocs/features'
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+  extensions:
+    Drupal\MinkExtension:
+      goutte: ~
+      selenium2: ~
+      base_url: http://localhost:8888
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: 'drupal' 
+      drush:
+        alias: 'local'
+      drupal: 
+        drupal_root: '/Applications/MAMP/htdocs/' 
