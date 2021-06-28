@@ -81,16 +81,20 @@ default:
 
 3. From the Command Palette (Ctrl+Shift+P), Execute the following commands appropriately
 
-   a. behatChecker.updateCache - the extension communicate with behat and ask for step definitions.If you change your php code, run this command to update de cache, so the extension will know about your new/updated steps.
+   a. *behatChecker.updateCache* - the extension communicate with behat and ask for step definitions.If you change your php code, run this command to update the cache, so the extension will know about your new/updated steps.
 
-   b. behatChecker.reload - will reload the extension server internal state.
+   b. *behatChecker.reload* - will reload the extension server internal state.
 
 ***Important Notes:***
 
-1. Not all the step definitions are able to identify these extensions and certain configurations would require in order to handle all of them. Please refer the required configurations/settings in their respective extensions pages above
+1. These extensions are not completely replace the features offered from [PhpStorm](https://www.jetbrains.com/help/phpstorm/run-debug-configuration-behat.html) but these are working decent enough to speed up your behat tests writing skills in vscode with "Zero" cost.
 
-2. This setup needs to modify based on your respective behat project directory since to make the [Behat Complete](https://marketplace.visualstudio.com/items?itemName=choppedcode.behat-complete) successful, it requires absolute path of behat reference to be configured.
+2. Not all the step definitions are able to identify by these extensions and certain configurations would require in order to handle all of them. Please refer the required configurations/settings in their respective extensions pages above.
 
-3. Regarding BLT Set-up, certain modifications are required in both vscode settings.json and BLT project/behat.yml file and seems this is not the recommended approach as per BLT project. Let me have a second word with our expertise for this.
+3. This setup needs to modify based on your respective behat project directory since to make the [Behat Complete](https://marketplace.visualstudio.com/items?itemName=choppedcode.behat-complete) successful, it requires absolute path of behat reference to be configured.
 
-4. These extensions are not completely replace the features offered from [PhpStorm](https://www.jetbrains.com/help/phpstorm/run-debug-configuration-behat.html) but these are working decent enough to speed up your behat tests writing skills in vscode with "Zero" cost.
+4. Regarding [Acquia BLT Setup](https://docs.acquia.com/blt/install/creating-new-project/) with these extensions, I have been trying the following approaches, and please find the current updates here.
+
+    a. Verify the extensions by connecting the vagrant virtual machine by making a remote connection like [this](https://medium.com/@lopezgand/connect-visual-studio-code-with-vagrant-in-your-local-machine-24903fb4a9de). - *Not working and extensions are not able to recognize the behat*
+
+    b. Install the VSCode in Virtual Machine location like [this](https://gist.github.com/sveggiani/10b6edd899412d6bdadd23c20607cf79) and access the behat inside VM machine - **ToDo**
